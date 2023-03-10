@@ -3,10 +3,10 @@ package Array2D;
 public class Array2D {
 
     public static void main(String[] args) {
-        int[][] arr = fillArray(5, 8);
-        for (int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr[0].length; j++){
-                System.out.print(arr[i][j] + " ");
+        int[][] arr = fillArray(8, 8);
+        for (int x = 0; x < arr.length; x++){
+            for(int y = 0; y < arr[0].length; y++){
+                System.out.print(arr[x][y] + " ");
             }
             System.out.println();
         }
@@ -15,20 +15,20 @@ public class Array2D {
     public static int[][] fillArray(int m, int n) {
         int[][] arr = new int[m][n];
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i == 0 || j == 0 || i == m - 1 || j == n - 1) {  // first and last row and column
-                    arr[i][j] = 1;
-                } else if (i == 1 || j == 1 || i == m - 2 || j == n - 2) {  // second and second-last row and column
-                    arr[i][j] = 2;
-                } else if (i == 2 || j == 2 || i == m - 3 || j == n - 3) {  // third and third-last row and column
-                    arr[i][j] = 3;
-                } else if (i == 3 || j == 3 || i == m - 4 || j == n - 4) {  // fourth and fourth-last row and column
-                    arr[i][j] = 4;
-                } else if (i == 4 || j == 4 || i == m - 5 || j == n - 5) {  // fifth and fifth-last row and column
-                    arr[i][j] = 5;
+        for (int x = 0; x < m; x++) {
+            for (int y = 0; y < n; y++) {
+                if (x == 0 || y == 0 || x == m - 1 || y == n - 1) {  // first and last row and column
+                    arr[x][y] = 1;
+                } else if (x == 1 || y == 1 || x == m - 2 || y == n - 2) {  // second and second-last row and column
+                    arr[x][y] = 2;
+                } else if (x == 2 || y == 2 || x == m - 3 || y == n - 3) {  // third and third-last row and column
+                    arr[x][y] = 3;
+                } else if (x == 3 || y == 3 || x == m - 4 || y == n - 4) {  // fourth and fourth-last row and column
+                    arr[x][y] = 4;
+                } else if (x == 4 || y == 4 || x == m - 5 || y == n - 5) {  // fifth and fifth-last row and column
+                    arr[x][y] = 5;
                 } else {  // all other elements
-                    arr[i][j] = 0;
+                    arr[x][y] = 0;
                 }
             }
         }
